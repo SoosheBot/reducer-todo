@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const TodoForm = ({dispatch}) => {
+const TodoForm = ({ dispatch }) => {
   const [task, setTask] = useState('');
 
   const handleChanges = e => {
@@ -24,14 +24,14 @@ const TodoForm = ({dispatch}) => {
   };
 
   return (
-    <div className="todo-form">
+    <div className="form">
       <form onSubmit={submitForm}>
         <input
-          name="todo"
+          name="task"
           type="text"
           value={task}
           onChange={handleChanges}
-          placeholder="Enter todo here..."
+          placeholder="Enter a new todo here..."
         />
         <button type="submit">Add Todo</button>
         <button onClick={deleteTask}>Delete Completed Todos</button>
@@ -41,3 +41,4 @@ const TodoForm = ({dispatch}) => {
 };
 
 export default TodoForm;
+

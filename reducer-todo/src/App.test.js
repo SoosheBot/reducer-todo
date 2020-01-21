@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { ClearComplete } from './components/ClearComplete';
+import { ToggleComplete } from './components/ToggleCompleted';
 import App from './App';
 
 
@@ -9,5 +9,5 @@ import App from './App';
 // });
 
 test('ClearComplete renders without crashing', () => {
-  render(<ClearComplete />)
+  render(<ToggleCompleted />)
 })

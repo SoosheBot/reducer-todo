@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Todo from './components/Todo';
+import { Todo } from './components/Todo';
 
 function App() {
   return (
@@ -14,3 +14,5 @@ function App() {
 }
 
 export default App;
+
+

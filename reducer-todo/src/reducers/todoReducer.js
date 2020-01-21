@@ -17,24 +17,24 @@ export const todoReducer = (state, action) => {
       return [
         ...state,
         {
-          item: action.payload,
-          completed: false,
-          id: Date.now()
+            item: action.payload,
+            completed: false,
+            id: Date.now()
         }
-      ];
+    ];
     case "TOGGLE_COMPLETED":
-      return state.map(todo => {
-        if (todo.id === action.payload) {
+      return state.map(todoComplete => {
+        if (todoComplete.id === action.payload) {
           return {
-            ...todo,
-            completed: !todo.completed
+            ...todoComplete,
+            completed: !todoComplete.completed
           };
         } else {
-          return todo;
+          return todoComplete;
         }
       });
     case "DELETE_COMPLETED":
-      return state.filter(todo => !todo.completed);
+      return state.filter(deleteComplete => !deleteComplete.completed);
 
     default:
       return state;
