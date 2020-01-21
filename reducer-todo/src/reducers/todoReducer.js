@@ -3,6 +3,11 @@ export const initialState = [
     item: "Learn about reducers and stuff",
     completed: false,
     id: 3892987589
+  },
+  {
+      item: 'Break everything',
+      completed: false,
+      id: 3892982527 
   }
 ];
 
@@ -28,7 +33,7 @@ export const todoReducer = (state, action) => {
           return todo;
         }
       });
-    case "CLEAR_COMPLETED":
+    case "DELETE_COMPLETED":
       return state.filter(todo => !todo.completed);
 
     default:

@@ -27,7 +27,7 @@ const TodoForm = ({dispatch}) => {
     <div className="todo-form">
       <form onSubmit={submitForm}>
         <input
-          name="item"
+          name="todo"
           type="text"
           value={task}
           onChange={handleChanges}
